@@ -1,0 +1,66 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Calendar",
+"language": "GDScript",
+"path": "res://addons/calendar_button/class/Calendar.gd"
+}, {
+"base": "Reference",
+"class": "CalendarButtons",
+"language": "GDScript",
+"path": "res://addons/calendar_button/scripts/calendar_buttons.gd"
+}, {
+"base": "Reference",
+"class": "Date",
+"language": "GDScript",
+"path": "res://addons/calendar_button/class/Date.gd"
+}, {
+"base": "HBoxContainer",
+"class": "TEST",
+"language": "GDScript",
+"path": "res://Planificator.gd"
+} ]
+_global_script_class_icons={
+"Calendar": "",
+"CalendarButtons": "",
+"Date": "",
+"TEST": ""
+}
+
+[application]
+
+config/name="Planificator"
+run/main_scene="res://Planificator.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/calendar_button/plugin.cfg", "res://addons/date-time-elements/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.0823529, 0.0823529, 0.0823529, 1 )
